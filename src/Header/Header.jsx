@@ -38,27 +38,27 @@ const Header = () => {
         </div>
       </div>
       {/* Banner */}
-      <div className="relative">
-        <div className="">
-          <img className="mx-auto my-6 " src={img} alt="" />
-        </div>
-        <div className="max-w-fit h-fit p-4 mx-auto  absolute right-[27%] top-[20%] ">
-          <h1 className="font-bold text-white text-center max-w-4xl text-5xl my-6">
-            Discover an exceptional cooking class tailored for you!
-          </h1>
+      <div>
+        <div className="w-[1320px] h-[600px] mx-auto relative">
+          <img className="my-6 " src={img} alt="" />
+          <div className="max-w-fit h-fit p-4 mx-auto  absolute right-[15%] top-[20%] ">
+            <h1 className="font-bold text-white text-center max-w-4xl text-5xl my-6">
+              Discover an exceptional cooking class tailored for you!
+            </h1>
 
-          <p className=" max-w-4xl  text-center text-white">
-            Like an artist wielding a brush, a chef crafts masterpieces from raw
-            ingredients, infusing each dish with creativity and soul, turning
-            ordinary moments into extraordinary memories.
-          </p>
-          <div className="text-center mt-6 ">
-            <button className="btn btn-success rounded-l-full rounded-r-full w-36 p-2 font-semibold text-lg">
-              Explore Now
-            </button>
-            <button className="btn btn-outline rounded-l-full rounded-r-full w-36 p-2 mx-5 text-white font-semibold text-lg">
-              Our Feedback
-            </button>
+            <p className=" max-w-4xl  text-center text-white">
+              Like an artist wielding a brush, a chef crafts masterpieces from
+              raw ingredients, infusing each dish with creativity and soul,
+              turning ordinary moments into extraordinary memories.
+            </p>
+            <div className="text-center mt-6 ">
+              <button className="btn btn-success rounded-l-full rounded-r-full w-36 p-2 font-semibold text-lg">
+                Explore Now
+              </button>
+              <button className="btn btn-outline rounded-l-full rounded-r-full w-36 p-2 mx-5 text-white font-semibold text-lg">
+                Our Feedback
+              </button>
+            </div>
           </div>
         </div>
       </div>
