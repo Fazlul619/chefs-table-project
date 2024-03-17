@@ -60,6 +60,20 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* our recipe */}
+      <div className="flex justify-center">
+        <div>
+          <h1 className="font-bold text-[#150B2B] text-center max-w-4xl text-4xl my-6">
+            Our Recipes
+          </h1>
+          <p className="max-w-4xl  text-center text-[#150B2B99] font-medium">
+            Recipes are the road maps to culinary adventures, guiding us through
+            a journey of flavors, textures, and aromas, where every ingredient
+            is a note and every dish a harmonious composition waiting to be
+            savored.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
