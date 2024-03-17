@@ -1,6 +1,6 @@
 import timeIcon from "../assets/icon/time.jpg";
 import fireIcon from "../assets/icon/fire icon.jpg";
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleAddToCookItem }) => {
   const {
     recipe_image,
     recipe_name,
@@ -11,7 +11,7 @@ const Recipe = ({ recipe }) => {
   } = recipe;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      <div className="w-80 h-52 px-6 pt-6">
+      <div className=" px-6 pt-6 items-center">
         <img className="rounded-xl" src={recipe_image} alt="" />
       </div>
       <div className="card-body">
@@ -24,8 +24,8 @@ const Recipe = ({ recipe }) => {
           Ingredients:{ingredients.length}
         </h1>
 
-        {ingredients.map((ingredients) => (
-          <span>
+        {ingredients.map((ingredients, idx) => (
+          <span key={idx}>
             <li className="text-[#878787] font-normal">{ingredients}</li>
           </span>
         ))}
@@ -33,17 +33,20 @@ const Recipe = ({ recipe }) => {
       </div>
 
       <div className="card-body flex justify-between flex-row">
-        <div className="flex gap-1">
+        <div className="flex gap-1 flex-wrap">
           <img src={timeIcon} alt="" />
           <p>{preparing_time} minutes</p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1 flex-wrap">
           <img src={fireIcon} alt="" />
           <p>{calories} calories</p>
         </div>
       </div>
       <div className="card-body">
-        <button className="btn btn-success rounded-l-full rounded-r-full w-36 p-2 font-semibold text-lg">
+        <button
+          onClick={() => handleAddToCookItem(recipe)}
+          className="btn btn-success rounded-l-full rounded-r-full w-36 p-2 font-semibold text-lg"
+        >
           Want to Cook
         </button>
       </div>

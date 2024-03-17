@@ -1,4 +1,6 @@
 import img from "../assets/img/Rectangle 1.jpg";
+import icon from "../assets/icon/contarc icon.jpg";
+import icon2 from "../assets/icon/search icon.jpg";
 const Header = () => {
   return (
     <div>
@@ -13,24 +15,24 @@ const Header = () => {
           <h2>Search</h2>
         </div>
         <div className="flex-none gap-2">
-          <div className="form-control ">
+          <div className="form-control relative ">
             <input
               type="text"
-              placeholder="Search"
-              className="input input-bordered w-24   md:w-auto rounded-full"
+              className="input input-bordered w-fit    rounded-full"
             />
+            <div className="flex absolute right-[60%] top-[30%]">
+              <img src={icon2} alt="" />
+              <p className="text-[#150B2BB3] font-semibold">Search</p>
+            </div>
           </div>
 
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle avatar"
+            className="btn btn-success btn-circle avatar bg-[#0BE58A]"
           >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+            <div className="w-10 rounded-full ">
+              <img alt="Tailwind CSS Navbar component" src={icon} />
             </div>
           </div>
         </div>
